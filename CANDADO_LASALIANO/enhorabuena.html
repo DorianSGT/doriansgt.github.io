@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHORABUENA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="enhorabuenatarjeta.css"></script>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .backroundpag2 {
+            background-image: url('img/fondo.png');
+            flex: 1;
+
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        /*ENHORABUENA*/
+        .card-congratulations {
+            transition: all 0.5s ease;
+            width: 300px;
+        }
+
+        .color-transition {
+            animation: colorCycle 5s infinite;
+        }
+
+        @keyframes colorCycle {
+            0% {
+                background-color: #ff6b6b;
+            }
+
+            16% {
+                background-color: #4ecdc4;
+            }
+
+            33% {
+                background-color: #45b7d1;
+            }
+
+            50% {
+                background-color: #f9d56e;
+            }
+
+            66% {
+                background-color: #ff9ff3;
+            }
+
+            83% {
+                background-color: #6a5af9;
+            }
+
+            100% {
+                background-color: #ff6b6b;
+            }
+        }
+    </style>
+</head>
+
+<body class="backroundpag2">
+    <div class="row">
+        <div class="col-9 d-flex align-items-center justify-content-center" style="background-color: #192b65;"><img
+                src="img/lasalle.jfif" class="img-fluid h-75" alt="la salle"></div>
+        <div class="col-3 d-flex align-items-center justify-content-center" style="background-color: #e8b11d;"><img
+                src="img/candado.png" class="img-fluid" alt="candado"></div>
+    </div>
+
+    <div class="card card-congratulations text-center color-transition">
+        <div class="card body">
+            <div class="card-title">
+                <p>ENHORABUENA</p>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <img src="img/personas.png" class="img-fluid" alt="personas" style="max-width: 420px;height: auto;">
+        </div>
+    </footer>
+
+</body>
+
+</html>
