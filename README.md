@@ -1,3 +1,3 @@
 # doriansgt.github.io
-Esto es mi repositorio para NCA
+Esto es mi repositorio para Marcas y Hardware 
 
