@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANDADO_LASALIANO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+        .league-spartan-verif {
+            font-family: "League Spartan", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 750;
+            font-style: normal;
+        }
+
+        /*fondo*/
+        .backroundpag1 {
+            background-image: url('img/fondo.png');
+
+        }
+
+        /*CANDADO*/
+        .input_candado {
+            width: 40px;
+            height: 30px;
+            background-color: white;
+            border: 1px solid #192b65;
+            color: #192b65;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 5px;
+            border-radius: 25px;
+            box-shadow:
+                0 4px 6px rgba(255, 255, 255, 0.1),
+                inset 0 0 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .input_candado:focus {
+            outline: none;
+            border-color: #192b65;
+            box-shadow:
+                0 6px 8px rgba(0, 0, 0, 0.15),
+                inset 0 0 15px rgba(232, 177, 29, 0.2);
+            transform: scale(1.05);
+        }
+
+        .input_candado::selection {
+            background-color: #192b65;
+            color: #192b65;
+        }
+
+        /*BOTON DE VERIFICAR*/
+        .btn-verificar {
+            background-color: #192b65;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            box-shadow: 0 8px 15px rgba(25, 43, 101, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-verificar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(25, 43, 101, 0.4);
+            background-color: #e8b11d;
+            color: #192b65;
+        }
+
+        .btn-verificar:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(25, 43, 101, 0.2);
+        }
+
+        
+    </style>
+</head>
+
+<body class="backroundpag1">
+    <div class="row">
+        <div class="col-9 d-flex align-items-center justify-content-center" style="background-color: #192b65;"><img
+                src="img/lasalle.jfif" class="img-fluid h-75" alt="la salle"></div>
+        <div class="col-3 d-flex align-items-center justify-content-center" style="background-color: #e8b11d;"><img
+                src="img/candado.png" class="img-fluid" alt="candado"></div>
+    </div>
+
+    <div class="container-fluid py-5 justify-content-center">
+        <img src="img/letras presentacion.png" class="img-fluid mx-auto d-block" alt="letras">
+    </div>
+    <div class="container-fluid">
+        <div class="text-center position-relative">
+            <img src="img/candado login.png" alt="candado" class="img-fluid"
+                style="max-height: 190px; margin-bottom: 25px;">
+
+            <form>
+                <div class="position-absolute bottom-0 translate-middle start-50">
+                    <div class="d-flex justify-content-center rounded-pill"
+                        style="padding: 7px;background-color: #192b65;">
+                        <input type="text" maxlength="1" class="input_candado passwd" id="1">
+                        <input type="text" maxlength="1" class="input_candado passwd" id="2">
+                        <input type="text" maxlength="1" class="input_candado passwd" id="3">
+                        <input type="text" maxlength="1" class="input_candado passwd" id="4">
+                        <input type="text" maxlength="1" class="input_candado passwd" id="5">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn btn-verificar league-spartan-verif fs-6 position-absolute"
+                        id="btn-verificar">VERIFICAR</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        
+        const resp = "salle";
+        const btn = document.getElementById('btn-verificar');
+
+        btn.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const s = document.getElementById("1").value;
+            const a = document.getElementById("2").value;
+            const l1 = document.getElementById("3").value;
+            const l2 = document.getElementById("4").value;
+            const e = document.getElementById("5").value;
+            const salle = s + a + l1 + l2 + e;
+            function alerta(){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Contraseña incorrecta!',
+                showCloseButton: true,
+                confirmButtonText: `OK`,  
+                customclass  
+                });
+            }
+
+            if (salle === resp) {
+                window.location.href = "enhorabuena.html";
+            } else {
+                alerta();
+            }
+        });
+
+        
+
+    </script>
+</body>
+
+</html>
