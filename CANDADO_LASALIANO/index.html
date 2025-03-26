@@ -81,7 +81,7 @@
         }
 
         .btn-verificar:active {
-            transform: translateY(0);
+            transform: translateY(5);
             box-shadow: 0 4px 10px rgba(25, 43, 101, 0.2);
         }
 
@@ -132,6 +132,18 @@
         const resp = "salle";
         const btn = document.getElementById('btn-verificar');
 
+        function alerta(){
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Contraseña incorrecta!',
+            showCloseButton: true,
+            confirmButtonText: `OK`,  
+            customClass: {confirmButton: 'btn-verificar'}, 
+            grow: 'center', 
+            });
+        }
+
         btn.addEventListener('click', (event) => {
             event.preventDefault();
 
@@ -141,21 +153,13 @@
             const l2 = document.getElementById("4").value;
             const e = document.getElementById("5").value;
             const salle = s + a + l1 + l2 + e;
-            function alerta(){
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Contraseña incorrecta!',
-                showCloseButton: true,
-                confirmButtonText: `OK`,  
-                customclass  
-                });
-            }
+            
 
             if (salle === resp) {
                 window.location.href = "enhorabuena.html";
             } else {
                 alerta();
+
             }
         });
 
