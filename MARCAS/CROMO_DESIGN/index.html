@@ -19,11 +19,54 @@
         }
 
         .estrellas {
-            height: 300px;
+            height: 270px;
             width: 30px;
             border: 1px solid rgb(0, 0, 0);
             display: block;
-            font-size: 38px;
+            font-size: 35px;
+            
+        }
+
+        .descripcion {
+            height: 100px;
+            width: 334px;
+            border: 1px solid rgb(0, 0, 0);
+            display: block;
+            font-size: 15px;
+            margin: 0 auto;
+            margin-top: 7px;
+        }
+        
+        .linea {
+            padding: 2px;
+            background-color: black;
+        }
+        
+        .atributo {
+            border: 1px solid black;
+            transform: skew(20deg);
+        }
+        
+        .titulo {
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid black;
+            padding: 2px;
+            
+        }
+
+        .referencia {
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        .af{
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid black;
+            padding: 2px;
             
         }
 
@@ -35,14 +78,19 @@
     <div class="cromo">
 
         <div style="display: block;"> 
-            <p style="display: inline-block;">SUPER FANTASMA</p>
-            <p style="display: inline-block;">18</p>
+            <p style="display: inline-block;" class="titulo">SUPER FANTASMA</p>
+            <p style="display: inline-block;" class="referencia">18</p>
         </div>
 
         <div style="display: block;">
 
-            <p style="display: inline-block;">ATRIBUTO</p>
+           
+            <p style="display: inline-block;" class="atributo">ATRIBUTO</p>
             <p style="display: inline-block;">FUERZA</p>
+
+    
+
+            
 
         </div>
 
@@ -56,10 +104,29 @@
             <div>*</div>
         </div>
 
-        <div >
-            CON TODA LA INFO RESUMIDA 
+        <div class="descripcion" >
+            <div style="display: block; font-size: 20px;">
+                <p style="display: inline-block;">estrellas</p>
+                <p style="display: inline-block;">Super Fantasma</p>
+            </div>
+            <div style="margin-top: -14px;">
+                <p>este es un ejemplo de descripcion</p>
+            </div>
+            
         </div>
-       
+
+
+        <div style="display: block;">
+            <div  style="display: block;">
+                <p style="display: inline-block;">artista</p>
+                <div style="display: inline-block;" class="linea"></div>
+                <p style="display: inline-block;">nombre real</p>
+            </div>
+            <div style="display: inline-block;">
+                18
+            </div>
+            
+        </div>
 
 
     </div>
