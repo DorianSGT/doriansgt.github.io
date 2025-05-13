@@ -21,14 +21,19 @@
         .estrellas {
             height: 270px;
             width: 30px;
-            border: 1px solid rgb(0, 0, 0);
+            color: white;
+            border: 1px solid black;
             display: block;
             font-size: 35px;
-            
-        }
+            overflow: hidden;
+            background-color: black;
+
+         }
+
+ 
 
         .descripcion {
-            height: 100px;
+            height: 120px;
             width: 334px;
             border: 1px solid rgb(0, 0, 0);
             display: block;
@@ -38,13 +43,17 @@
         }
         
         .linea {
-            padding: 2px;
+            padding: 1px;
             background-color: black;
+            width: 200px;
+            margin-left: 33px;
         }
         
         .atributo {
             border: 1px solid black;
-            transform: skew(20deg);
+            width: 40%;
+            padding: 2px;
+            
         }
         
         .titulo {
@@ -52,6 +61,7 @@
             text-align: center;
             border: 1px solid black;
             padding: 2px;
+            width: 70%;
             
         }
 
@@ -60,13 +70,13 @@
             text-align: center;
             border: 1px solid black;
             padding: 2px;
+            width: 10%;
         }
 
-        .af{
-            font-weight: bold;
-            text-align: center;
+        .fuerza{
             border: 1px solid black;
             padding: 2px;
+            width: 40%;
             
         }
 
@@ -82,19 +92,12 @@
             <p style="display: inline-block;" class="referencia">18</p>
         </div>
 
-        <div style="display: block;">
-
-           
+        <div style="display: block; margin-top: -20px;">
             <p style="display: inline-block;" class="atributo">ATRIBUTO</p>
-            <p style="display: inline-block;">FUERZA</p>
-
-    
-
-            
-
+            <p style="display: inline-block;" class="fuerza">FUERZA</p>
         </div>
 
-        <div class="estrellas">
+        <div class="estrellas borde-inferior borde-superior">
             <div>*</div>
             <div>*</div>
             <div>*</div>
@@ -104,29 +107,31 @@
             <div>*</div>
         </div>
 
-        <div class="descripcion" >
-            <div style="display: block; font-size: 20px;">
-                <p style="display: inline-block;">estrellas</p>
-                <p style="display: inline-block;">Super Fantasma</p>
+        <div class="descripcion">
+            <div style="display: flex; justify-content: space-between; font-size: 20px; margin-top: -10px;">
+                <p style="margin-left: 10px;">* * * * * *</p>
+                <p style="margin-right: 10px;">Super Fantasma</p>
             </div>
-            <div style="margin-top: -14px;">
+            <div style="margin-top: -7px;">
                 <p>este es un ejemplo de descripcion</p>
             </div>
-            
         </div>
+        
 
 
-        <div style="display: block;">
-            <div  style="display: block;">
-                <p style="display: inline-block;">artista</p>
-                <div style="display: inline-block;" class="linea"></div>
-                <p style="display: inline-block;">nombre real</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+            <div style="text-align: center;">
+                <p style="margin: 0;">artista</p>
+                <div class="linea"></div>
+                <p style="margin: 0;">nombre real</p>
             </div>
-            <div style="display: inline-block;">
-                18
+            <div style="margin-right: 50px;">
+                <p>18</p>
             </div>
-            
         </div>
+        
+        
+        
 
 
     </div>
