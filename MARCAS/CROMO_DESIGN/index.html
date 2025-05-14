@@ -19,10 +19,10 @@
             text-align: center;
             border: 2px solid rgb(0, 0, 0);
             border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             overflow: visible;
             z-index: 0;
             animation: resplandecer 4s infinite;
+
             
         }
 
@@ -44,10 +44,10 @@
         
         @keyframes resplandecer {
             0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 70px rgb(0, 162, 255);
             }
             50% {
-                box-shadow: 0 0 50px rgb(0, 0, 0);
+                box-shadow: 0 0 20px rgb(0, 162, 255);
             }
         }
 
@@ -93,46 +93,49 @@
         }
         
         .atributo {
-            border: 1px solid rgb(255, 255, 255);
+
             width: 40%;
             padding: 2px;
             background-color: white;
-            box-shadow: 0 0 20px rgb(255, 255, 255);
+            box-shadow: 0 0 12px rgb(255, 255, 255);
             border-radius: 20px;
+            font-size: 18px;
         }
-        
+            
         .titulo {
             font-weight: bold;
             text-align: center;
-            border: 1px solid rgb(255, 255, 255);
             padding: 2px;
             width: 70%;
             background-color: white;
-            box-shadow: 0 0 20px rgb(255, 255, 255);
+            box-shadow: 0 0 18px rgb(255, 255, 255);
             border-radius: 20px;
+            font-size: 18px;
             
         }
 
         .referencia {
             font-weight: bold;
             text-align: center;
-            border: 1px solid rgb(255, 255, 255);
             padding: 2px;
             width: 10%;
             background-color: white;
-            box-shadow: 0 0 20px rgb(255, 255, 255);
+            box-shadow: 0 0 18px rgb(255, 255, 255);
             border-radius: 20px;
+            font-size: 18px;
+            
         }
 
         .fuerza{
-            border: 1px solid rgb(255, 255, 255);
             padding: 2px;
             width: 40%;
             background-color: white;
-            box-shadow: 0 0 20px rgb(255, 255, 255);
+            box-shadow: 0 0 12px rgb(255, 255, 255);
             border-radius: 20px;
+            font-size: 18px;
             
         }
+        
 
         .contenedor {
             display: flex;
@@ -142,10 +145,11 @@
         .imagen img {
             width: 100%; 
             height: 100%;
-            max-height: 270px; 
+            max-height: 250px; 
             object-fit: cover;
             max-width: 400px;
-            margin-left: 12px;
+            margin-left: 20px;
+            
         }
         
         .linea2 {
@@ -159,10 +163,11 @@
             text-shadow:  0 0 8px rgb(255, 255, 255);;
 
         }
+        
         body{
-            background-color: rgb(255, 255, 255);
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.918);
+             font-family: 'Raleway', sans-serif;
+            font-weight: 1000;
             display: flex; 
             justify-content: center; 
             align-items: center; 
@@ -170,13 +175,23 @@
             
             
         }
-
+        .animate__animated.animate__zoomInUp {
+            --animate-duration: 2.5s; 
+            --animate-delay: 1s; 
+            animation-iteration-count: unset;
+        }
     </style>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+     <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
 </head>
 <body>
 
-    <div class="cromo">
+    <div class="cromo animate__animated animate__zoomInUp ">
 
         <div style="display: block;"> 
             <p style="display: inline-block;" class="titulo">SUPER FANTASMA</p>
@@ -187,6 +202,8 @@
             <p style="display: inline-block;" class="atributo">ATRIBUTO</p>
             <p style="display: inline-block;" class="fuerza">FUERZA</p>
         </div>
+
+
 
 
         <div class="contenedor">
@@ -205,25 +222,25 @@
         </div>
 
         <div class="descripcion">
-            <div style="display: flex; justify-content: space-between; font-size: 20px; margin-top: -7px; align-items: center;">
-                <p style="margin-left: 10px;">★★★★★★</p>
-                <p style="margin-right: 10px;">SUPER FANTASMA</p>
+            <div style="display: flex; justify-content: space-between; font-size: 20px; ; align-items: center;">
+                <p style="margin-left: 10px; margin-top: 6px;">★★★★★★</p>
+                <p style="margin-right: 10px; margin-top: 6px;">SUPER FANTASMA</p>
             </div>
             <div style="margin-top: 2px;">
-                <p>Un perro que tiene la realidad alterada y se cree momo</p>
+                <p>Un perro con la realidad alterada y se cree fantasma</p>
             </div>
         </div>
         
 
         <div class="linea2"></div>
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="blanca-neon">
-            <div style="text-align: left; margin-left: 35px;">
-                <p style="margin: 0;">Artista</p>
+        <div style="display: flex; justify-content: space-between;" class="blanca-neon">
+            <div style="text-align: left; margin-left: 35px; margin-top: 5px;">
+                <p style="margin: 0; font-size: 15px;">Artista</p>
                 <div class="linea"></div>
-                <p style="margin: 0;">Nombre real</p>
+                <p style="margin: 0; font-size: 15px;">Nombre real</p>
             </div>
-            <div style="margin-right: 50px; font-weight: bold;">
-                <p>/18</p>
+            <div style="margin-right: 50px; font-weight: bold; margin-top: -18px;">
+                <p style=" font-size: 25px;">/18</p>
             </div>
         </div>
         
