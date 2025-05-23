@@ -21,8 +21,7 @@
       width: 100vw;
       min-height: 100vh;
     }
-
-    /* Contenedor de Parallax */
+   
     .contenedor-parallax {
       height: 100vh;
       overflow-x: hidden;
@@ -30,7 +29,6 @@
       perspective: 1px;
     }
 
-    /* Capas de Fondo Parallax */
     .fondo-parallax {
       position: absolute;
       top: 0;
@@ -67,7 +65,6 @@
       100% { background-position: 0% 0%; }
     }
 
-    /* Secciones de pantalla completa con efecto parallax */
     .seccion-parallax {
       height: 100vh;
       width: 100vw;
@@ -80,7 +77,7 @@
       margin: 0;
     }
 
-    /* Transiciones de color diagonales discretas */
+  
     .dia-1 {
       background: linear-gradient(135deg, 
         rgba(0, 20, 40, 0.9) 0%,
@@ -102,7 +99,7 @@
         rgba(80, 60, 0, 0.8) 100%);
     }
 
-    /* Encabezado */
+   
     header {
       height: 100vh;
       width: 100vw;
@@ -146,7 +143,7 @@
       to { opacity: 0.8; transform: translateY(0); }
     }
 
-    /* Secciones de contenido con efecto parallax */
+   
     section {
       width: 85%;
       max-width: 1200px;
@@ -185,7 +182,7 @@
       transform: translateZ(0) translateY(-5px) scale(1.01);
     }
 
-    /* Tipografía con colores discretos */
+   
     h2 {
       font-size: 2.5rem;
       margin-bottom: 30px;
@@ -263,29 +260,7 @@
     li:hover::before {
       opacity: 0.8;
     }
-
-    /* Barra de Progreso */
-    .contenedor-progreso {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-    }
-
-    .barra-progreso {
-      height: 100%;
-      background: linear-gradient(90deg, 
-        rgba(77, 208, 225, 0.8) 0%,
-        rgba(206, 147, 216, 0.8) 50%,
-        rgba(255, 183, 77, 0.8) 100%);
-      width: 0%;
-      animation: progressGrow 1s ease-out;
-    }
-
-    /* Elementos flotantes con animación CSS */
+    
     .elemento-flotante {
       position: fixed;
       border-radius: 50%;
@@ -341,7 +316,7 @@
       80% { transform: translate(-20px, 25px) rotate(288deg) scale(0.94); }
     }
 
-    /* Indicador de desplazamiento */
+    
     .indicador-desplazamiento {
       position: fixed;
       bottom: 30px;
@@ -359,7 +334,7 @@
       60% { transform: translateX(-50%) translateY(-6px); }
     }
 
-    /* Responsive */
+    
     @media (max-width: 768px) {
       header h1 { font-size: 2.5rem; }
       header p { font-size: 1.2rem; }
@@ -368,7 +343,7 @@
       .elemento-flotante { display: none; }
     }
 
-    /* Transiciones suaves entre secciones */
+   
     .seccion-parallax {
       background-attachment: fixed;
       background-size: cover;
@@ -378,34 +353,26 @@
 </head>
 <body>
 
-  <!-- Barra de Progreso -->
-  <div class="contenedor-progreso">
-    <div class="barra-progreso"></div>
-  </div>
-
-  <!-- Capas de Fondo Parallax -->
   <div class="fondo-parallax capa-fondo-1"></div>
   <div class="fondo-parallax capa-fondo-2"></div>
 
-  <!-- Elementos Flotantes -->
   <div class="elemento-flotante flotar-1"></div>
   <div class="elemento-flotante flotar-2"></div>
   <div class="elemento-flotante flotar-3"></div>
 
-  <!-- Encabezado Principal -->
   <header>
-    <h1>🚀 BITÁCORA GRUPO 2 👨🏻‍💻</h1>
-    <p>Proyecto Teeworlds + SQLite</p>
-    <p style="font-size: 1rem; opacity: 0.6;">Desarrollo colaborativo de 3 días</p>
+    <h1> BITÁCORA GRUPO 2 </h1>
+    <p>NCA JUGAMOS</p>
+    <p style="font-size: 1rem; opacity: 0.6;">Juan Diego, Dorian, Fernando, Alejandro</p>
     <div class="indicador-desplazamiento">⬇</div>
   </header>
 
   <!-- Día 1 -->
   <div class="seccion-parallax dia-1">
     <section>
-      <h2>📅 Día 1 - Descubrimiento e Instalación</h2>
+      <h2>📅 Día 1 - Miércoles</h2>
       
-      <h3>🌅 Primera Parte (1ª, 2ª y 3ª Hora)</h3>
+      <h3>🕐 1ª, 2ª y 3ª Hora</h3>
       <ul>
         <li>Dorian encontró un juego llamado <strong>Teeworlds</strong> que es de código abierto</li>
         <li>Instalamos SQLite en todos nuestros sistemas</li>
@@ -413,10 +380,10 @@
         <li>Configuramos la red para poder interconectarnos y jugar en local</li>
       </ul>
       
-      <h3>🌆 Segunda Parte (4ª, 5ª y 6ª Hora)</h3>
+      <h3>🕐 4ª, 5ª y 6ª Hora</h3>
       <ul>
-        <li><strong>Juan Diego:</strong> buscó información y probó el juego (rendimiento regular), exploró otras opciones</li>
-        <li><strong>Fernando:</strong> encontró el entorno gráfico de SQLite y lo instalamos; también descubrió otro juego alternativo</li>
+        <li><strong>Juan Diego:</strong> buscó información y probó el juego(teeworlds)en la máquina,ya que iba regular exploramos otras opciones</li>
+        <li><strong>Fernando:</strong> encontró el entorno gráfico de SQLite y lo instalamos; también descubrió otro juego alternativo llamado Openarena</li>
         <li><strong>Fernando y Juan Diego:</strong> investigaron métodos para enlazar el juego con SQLite</li>
         <li>Primeros intentos de configuración de red entre equipos</li>
       </ul>
@@ -428,22 +395,36 @@
     <section>
       <h2>📅 Día 2 - Configuración y Primeras Pruebas</h2>
       
-      <h3>🚀 Avances Principales</h3>
+      <h3>🕐 1ª Hora</h3>
       <ul>
-        <li>Instalamos el juego Teeworlds en todos los equipos y realizamos las primeras pruebas</li>
+        <li>Instalamos el juego OpenArena en todos los equipos y realizamos las primeras pruebas</li>
         <li><strong>Fernando</strong> creó exitosamente el servidor del juego en local</li>
         <li><strong>Juan Diego, Alejandro y Dorian</strong> avanzaron significativamente en la bitácora del proyecto</li>
         <li><strong>Dorian</strong> creó una tabla organizativa asignando las direcciones IP para todos los equipos</li>
         <li><strong>Juan Diego</strong> documentó el progreso en la bitácora y buscó información técnica sobre enlace con base de datos</li>
       </ul>
       
-      <h3>🔍 Descubrimiento Importante</h3>
+      <h3>🕐 2ª y 3ª Hora</h3>
       <ul>
-        <li><strong>Fernando y Juan Diego</strong> descubrieron que Teeworlds no contiene una base de datos integrada</li>
-        <li>Se plantearon la necesidad de encontrar métodos alternativos para enlazar las estadísticas de las partidas</li>
-        <li>Investigación sobre registros del servidor y posibles interfaces de programación</li>
-        <li>Primeras pruebas de conectividad multijugador exitosas</li>
+        <li>Hemos Hemos configurado el router y las máquinas virtuales para poder conectarlas</li>
+        <li>Hemos conectado las máquinas al router y realixado pings entre ellas para comprobar su correcto funcionamiento</li>
+        <li><strong>Fernando</strong>creó el servidor en su máquina</li>
+        <li>Todos nos conectamos al servidor y jugamos entre todos</li>
       </ul>
+
+      <h3>🕐 4ª Hora</h3>
+      <ul>
+        <li>Dorian y Juan Diego avanzaron con la bitácora </li>
+        <li>Investigamos cómo conectar el servidor a SQLite</li>
+      </ul>
+
+      <h3>🕐 5ª y 6ª Hora</h3>
+      <ul>
+        <li>Fernando logró conectar la base de datos del servidor a SQLite</li>
+        <li>Todos probamos a jugar para comprobar el funcionamiento de la base de datos</li>
+        <li>Juan Diego y Dorian avanzaron significativamente con la bitácora </li>
+      </ul>
+
     </section>
   </div>
 
@@ -452,13 +433,15 @@
     <section>
       <h2>📅 Día 3 - Implementación y Finalización</h2>
       
-      <h3>🛠️ Desarrollo Técnico</h3>
+      <h3>1ª Hora</h3>
       <ul>
-        <li>Implementamos soluciones para capturar datos del servidor Teeworlds</li>
-        <li>Configuramos scripts para monitorear registros y extraer estadísticas de juego</li>
-        <li>Creamos la estructura de base de datos SQLite para almacenar información de partidas</li>
-        <li>Establecimos conexión estable entre el servidor de juego y la base de datos</li>
-        <li>Realizamos pruebas extensivas de funcionamiento con todo el equipo</li>
+        <li>Fernando ha descubierto un problema con el servidor junto con Alejandro, en el cual se ha dado cuenta que los .log no se registraban en la base de datos, por ello tuvimos que reiniciar su  máquina virtual. Siguieron haciendo pruebas.</li>
+        <li>Dorian y Juan Diego, han avanzado con la bitácora, añadiendo información y ultimando detalles del estilo 
+        </li>
+        <li>Dorian y Juan Diego, pensaron en una forma para que un compañero independiente de la red del equipo 2 pueda entrar a jugar. 
+        </li>
+        <li>Juan Diego junto a Dorian encontraron la solución para que un compañero se pueda conectar a nuestro juego,debemos entrar al router, application and gaming, poner el puerto del servidor y luego poner la ip del que está haciendo el servidor.
+        </li>
       </ul>
       
       <h3>🎯 Resultados Finales</h3>
@@ -471,10 +454,12 @@
       </ul>
       
       <h3>👥 Contribuciones del Equipo</h3>
-      <p><strong>Dorian:</strong> Investigación inicial y configuración de red | <strong>Juan Diego:</strong> Documentación y desarrollo de scripts | <strong>Fernando:</strong> Administración de servidor y base de datos | <strong>Alejandro:</strong> Pruebas y optimización del sistema</p>
+      <p><strong>Dorian:</strong> Investigación inicial y configuración de red</p>
+      <p><strong>Juan Diego:</strong> Documentación y desarrollo de scripts</p>
+      <p><strong>Fernando:</strong> Administración de servidor y base de datos</p>
+      <p><strong>Alejandro:</strong> Pruebas y optimización del sistema</p>
     </section>
   </div>
 
 </body>
 </html>
-
