@@ -1,22 +1,186 @@
+---
+// Layout.astro
+// Versión: Starfield Parallax (Pure CSS/Sass)
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Geist+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+		
+		<title>Dorian García - Portfolio ASIR</title>
 	</head>
-	<body>
-		<slot />
+	
+	<body class="font-sans antialiased text-white min-h-screen relative overflow-x-hidden">
+		
+		<div class="fixed inset-0 -z-10 overflow-hidden bg-space">
+			<div id="stars"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+		</div>
+
+		<main class="relative z-10 max-w-5xl mx-auto">
+			<slot />
+		</main>
+
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style lang="scss" is:global>
+    // 1. Función de sombras (Sin cambios)
+    @function multiple-box-shadow($n) {
+        $value: '#{random(2000)}px #{random(2000)}px #FFF';
+        @for $i from 2 through $n {
+            $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+        }
+        @return unquote($value);
+    }
+
+    // 2. Generamos estrellas (Sin cambios)
+    $shadows-small:  multiple-box-shadow(700);
+    $shadows-medium: multiple-box-shadow(200);
+    $shadows-big:    multiple-box-shadow(100);
+
+    // 3. Estilos globales
+    :root {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
+    .bg-space {
+        // Antes: ... #090A0F 100%
+        // Ahora: ... #090A0F 150% (Esto "estira" el azul hacia arriba un 50% más)
+        // También cambié ligeramente el azul inicial (#1b2735) para que sea un pelín más brillante
+        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090A0F 110%);
+    }
+
+    // Animación de subida
+    @keyframes animStar {
+        from { transform: translateY(0px); }
+        to   { transform: translateY(-2000px); }
+    }
+
+    // Configuración de estrellas
+    #stars {
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadows-small;
+        animation: animStar 50s linear infinite;
+        
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: $shadows-small;
+        }
+    }
+
+    #stars2 {
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+        animation: animStar 100s linear infinite;
+        
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: $shadows-medium;
+        }
+    }
+
+    #stars3 {
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $shadows-big;
+        animation: animStar 150s linear infinite;
+        
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 2000px;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: $shadows-big;
+        }
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #090A0F;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #4a5568;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background:rgb(113, 128, 150);
+    }
+    
+		/* Glassmorphism limpio con iluminación de órbita */
+	.glass {
+		/* Hice el fondo un pelín más oscuro (0.5) para que el brillo destaque más */
+		background: rgba(14, 21, 28, 0.5); 
+		backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		
+		/* NUEVO: Iluminación ambiental basada en el color #1b2735 */
+		/* Capa 1 (Ancha y suave): Crea el resplandor general */
+		/* Capa 2 (Estrecha): Ancla la tarjeta al fondo */
+		box-shadow: 
+			0 20px 40px -10px rgba(27, 39, 53, 0.5),
+			0 5px 15px -3px rgba(27, 39, 53, 0.3);
+		
+		/* Opcional: una transición suave por si añades efectos hover luego */
+		transition: all 0.3s ease-in-out;
 	}
+
+    /* Estilo para texto neón blanco */
+    .neon-white {
+        color: #ffffff;
+        text-shadow: 
+            0 0 5px #ffffff44,
+            0 0 8px #ffffff44,
+            0 0 15px #ffffff44;
+        transition: all 0.3s ease;
+    }
+
+    .neon-white:hover {
+        text-shadow: 
+            0 0 4px #ffffff44,
+            0 0 6px #ffffff44,
+            0 0 15px #ffffff44,
+            0 0 15px #ffffff44,
+            0 0 24px #ffffff38;
+        transform: scale(1.05);
+    }
+
+    /* Estilo para menú móvil */
+    .mobile-menu-link:hover {
+        color: #7dd3fc !important;
+        text-shadow: 
+            0 0 5px rgba(125, 211, 252, 0.5),
+            0 0 10px rgba(125, 211, 252, 0.3),
+            0 0 15px rgba(125, 211, 252, 0.2);
+    }
 </style>

@@ -1,0 +1,23 @@
+[
+    {
+      "titulo": "Hardening de Servidor Linux",
+      "descripcion": "Configuración de seguridad en Ubuntu Server: SSH keys, Fail2Ban y Firewall UFW configurado para denegar todo el tráfico entrante por defecto.",
+      "tags": ["Linux", "Seguridad", "Bash"],
+      "link": "https://github.com/tu-usuario/proyecto1",
+      "github": "https://github.com/tu-usuario/repo-hardening"
+    },
+    {
+      "titulo": "Despliegue de Red con Docker",
+      "descripcion": "Creación de una red interna con contenedores aislados usando Docker Compose. Incluye servidor web Nginx y base de datos MariaDB.",
+      "tags": ["Docker", "Redes", "Contenedores"],
+      "link": "#",
+      "github": "https://github.com/tu-usuario/repo-hardening"
+    },
+    {
+      "titulo": "Script de Backup Automático",
+      "descripcion": "Script en Python que realiza copias de seguridad incrementales de directorios críticos y los cifra con GPG antes de enviarlos a la nube.",
+      "tags": ["Python", "Scripting", "Automatización"],
+      "link": "#",
+      "github": "https://github.com/tu-usuario/repo-hardening"
+    }
+]
