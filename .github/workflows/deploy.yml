@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Se ejecuta cada vez que subes algo a la rama main
+  push:
+    branches: [ main ]
+  # Te permite darle al botón manual en la web si quieres
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      
+      # Este es el Chef de Astro oficial
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
