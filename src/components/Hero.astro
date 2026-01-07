@@ -20,9 +20,18 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-7 justify-center md:justify-start items-center">
-                    <a href="/cv.pdf" download class="cv-button px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-                        CV
+                    
+                    <a href="/cv/CVDorianGarcía.pdf" download="CVDorianGarcía.pdf" class="btn-galaxy">
+                        <strong>CV</strong>
+                        <div id="container-stars">
+                            <div id="stars"></div>
+                        </div>
+                        <div id="glow">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
                     </a>
+
                     <div class="flex gap-7">
                         <a href="https://github.com/DorianSGT" target="_blank" class="social-icon group">
                             <img src="imagenes/github.png" alt="GitHub" class="w-9 h-9 transition-all duration-300 group-hover:scale-110 white-icon" />
@@ -42,7 +51,7 @@
                         class="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
                     />
                 </div>
-            </div>
+            </div> 
             
         </div>
     </div>
@@ -80,27 +89,181 @@
         0%, 50% { opacity: 1; }
         51%, 100% { opacity: 0; }
     }
+
+    /* ------------------------------------------- */
+    /* BOTÓN GALAXY (Estilo Cyber-Nebulosa)        */
+    /* ------------------------------------------- */
     
-    /* BOTÓN CV */
-    .cv-button {
-        background: linear-gradient(135deg, #0ea5e9 20%, #6366f1 50%, #0ea5e9 100%);
-        background-size: 200% 200%;
-        animation: gradient-shift 3s ease infinite;
-        color: white;
-        box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+    .btn-galaxy {
+        /* Configuración base del contenedor */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 3rem;
+        overflow: hidden;
+        background-size: 300% 300%;
+        cursor: pointer;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+        transition: 0.5s;
+        text-decoration: none; /* Quitamos subrayado */
+        
+        /* Animación del borde gradiente */
+        animation: gradient_301 5s ease infinite;
+        border: double 4px transparent;
+        
+        /* AQUI ESTÁ LA MAGIA DE LOS COLORES */
+        /* Capa 1: Fondo oscuro (Tu nebulosa #1b2735) */
+        /* Capa 2: El gradiente del borde (Cyan, Azul, Violeta) */
+        background-image: linear-gradient(#1b2735, #1b2735),
+            linear-gradient(
+                137.48deg,
+                #2045c8 10%,   /* Cyan */
+                #6366f1 45%,   /* Indigo */
+                #8f51ea 67%,   /* Violeta */
+                #0044ff 87%    /* Azul Eléctrico */
+            );
+        background-origin: border-box;
+        background-clip: content-box, border-box;
     }
-    
-    @keyframes gradient-shift {
+
+    /* Contenedor de estrellas */
+    #container-stars {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+        background-color: rgba(5, 7, 10, 0.567);
+    }
+
+    /* Texto del botón */
+    strong {
+        z-index: 2;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px; /* Un pelín más grande para leerse bien */
+        letter-spacing: 3px;
+        color: #ffffff;
+        text-shadow: 0 0 7px rgba(255, 255, 255, 0.935);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    /* El brillo interior (Blobs) */
+    #glow {
+        position: absolute;
+        display: flex;
+        width: 12rem;
+    }
+
+    .circle {
+        width: 100%;
+        height: 30px;
+        filter: blur(2rem);
+        animation: pulse_3011 4s infinite;
+        z-index: -1;
+    }
+
+    /* Colores del brillo interior adaptados a tu tema */
+    .circle:nth-of-type(1) {
+        background: rgba(14, 165, 233, 0.636); /* Cyan */
+    }
+
+    .circle:nth-of-type(2) {
+        background: rgba(99, 102, 241, 0.704); /* Indigo */
+    }
+
+    /* Interacciones Hover */
+    .btn-galaxy:hover #container-stars {
+        z-index: 1;
+        background-color: #1b2735; /* Fondo nebulosa al hacer hover */
+    }
+
+    .btn-galaxy:hover {
+        transform: scale(1.05); /* Escala sutil */
+    }
+
+    .btn-galaxy:active {
+        border: double 4px #0ea5e9; /* Borde cyan al hacer click */
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        animation: none;
+    }
+
+    .btn-galaxy:active .circle {
+        background: #0ea5e9;
+    }
+
+    /* Animación de estrellas de fondo */
+    #stars {
+        position: relative;
+        background: transparent;
+        width: 200rem;
+        height: 200rem;
+    }
+
+    #stars::after {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        left: -100rem;
+        width: 100%;
+        height: 100%;
+        animation: animStarRotate 90s linear infinite;
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+    }
+
+    #stars::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 170%;
+        height: 500%;
+        animation: animStar 60s linear infinite;
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+        opacity: 0.5;
+    }
+
+    /* Keyframes */
+    @keyframes animStar {
+        from { transform: translateY(0); }
+        to { transform: translateY(-135rem); }
+    }
+
+    @keyframes animStarRotate {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0); }
+    }
+
+    @keyframes gradient_301 {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
     }
-    
-    .cv-button:hover {
-        box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+
+    @keyframes pulse_3011 {
+        0% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+        }
+        100% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+        }
     }
-    
-    /* ICONOS */
+
+    /* ICONOS SOCIALES */
     .white-icon {
         filter: brightness(0) invert(1);
         opacity: 0.7; 
@@ -113,19 +276,13 @@
         transform: scale(1.1);
     }
     
-    /* ------------------------------------------- */
-    /* AVATAR: EFECTO SHEEN (SIN BORDES NI DIVS VISIBLES) */
-    /* ------------------------------------------- */
-    
+    /* AVATAR */
     .avatar-container {
-        /* Esto es vital para que el brillo sea redondo, aunque no veas el div */
         border-radius: 50%; 
-        /* Truco para Safari/Chrome para recortar el brillo perfectamente */
         mask-image: radial-gradient(white, black);
         -webkit-mask-image: -webkit-radial-gradient(white, black);
     }
 
-    /* EL BRILLO INVISIBLE QUE APARECE */
     .avatar-container::after {
         content: '';
         position: absolute;
@@ -133,14 +290,12 @@
         left: -150%; 
         width: 100%;
         height: 100%;
-        
         background: linear-gradient(
             to right, 
             rgba(255,255,255,0) 0%, 
             rgba(125, 211, 252, 0.6) 50%, 
             rgba(255,255,255,0) 100%
         );
-        
         transform: skewX(-30deg);
         pointer-events: none; 
     }
@@ -150,8 +305,6 @@
     }
 
     @keyframes sheen {
-        100% {
-            left: 150%;
-        }
+        100% { left: 150%; }
     }
 </style>
