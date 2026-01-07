@@ -55,10 +55,8 @@
     
     // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
     .bg-space {
-        // Antes: ... #090A0F 100%
-        // Ahora: ... #090A0F 150% (Esto "estira" el azul hacia arriba un 50% más)
-        // También cambié ligeramente el azul inicial (#1b2735) para que sea un pelín más brillante
-        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090A0F 110%);
+
+        background: radial-gradient(ellipse at bottom, #1e2d3e 13%, rgb(9, 10, 15) 57%);
     }
 
     // Animación de subida
@@ -140,8 +138,8 @@
 		/* Glassmorphism limpio con iluminación de órbita */
 	.glass {
 		/* Hice el fondo un pelín más oscuro (0.5) para que el brillo destaque más */
-		background: rgba(14, 21, 28, 0.5); 
-		backdrop-filter: blur(5px);
+		background: rgba(18, 20, 30, 0.331); 
+		backdrop-filter: blur(2px);
 		border: 1px solid rgba(255, 255, 255, 0.08);
 		
 		/* NUEVO: Iluminación ambiental basada en el color #1b2735 */
