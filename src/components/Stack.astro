@@ -1,122 +1,164 @@
 ---
 // Componente Stack Tecnológico - Organizado en 4 cards con grids 3x3
 const frontend = [
-	{ name: 'HTML', image: '/logos/html.png' },
-	{ name: 'CSS', image: '/logos/css.png' },
-	{ name: 'JavaScript', image: '/logos/javascript.png' },
-	{ name: 'TailwindCSS', image: '/logos/tailwindcss.png' },
-	{ name: 'Bootstrap', image: '/logos/bootstrap.png' },
-	{ name: 'Astro', image: '/logos/astro.png' },
+	{ name: "HTML", image: "/logos/html.png" },
+	{ name: "CSS", image: "/logos/css.png" },
+	{ name: "JavaScript", image: "/logos/javascript.png" },
+	{ name: "TailwindCSS", image: "/logos/tailwindcss.png" },
+	{ name: "Bootstrap", image: "/logos/bootstrap.png" },
+	{ name: "Astro", image: "/logos/astro.png" },
 ];
 
 const backend = [
-	{ name: 'Python', image: '/logos/python.png' },
-	{ name: 'PHP', image: '/logos/php.png' },
-	{ name: 'MySQL', image: '/logos/mysql.png' },
-	{ name: 'SQLite3', image: '/logos/sqlite.png' },
-	{ name: 'PostgreSQL', image: '/logos/postgresql.png' },
-	{ name: 'Apache', image: '/logos/apache.png' },
+	{ name: "Python", image: "/logos/python.png" },
+	{ name: "PHP", image: "/logos/php.png" },
+	{ name: "MySQL", image: "/logos/mysql.png" },
+	{ name: "SQLite3", image: "/logos/sqlite.png" },
+	{ name: "PostgreSQL", image: "/logos/postgresql.png" },
+	{ name: "Apache", image: "/logos/apache.png" },
 ];
 
 const herramientas = [
-	{ name: 'Git', image: '/logos/git.png' },
-	{ name: 'VSCode', image: '/logos/vscode.png' },
-	{ name: 'Terminal', image: '/logos/terminal.png' },
-	{ name: 'npm', image: '/logos/npm.png' },
-	{ name: 'Docker', image: '/logos/docker.png' },
-	{ name: 'Linux', image: '/logos/linux.png' },
-	{ name: 'Windows Server', image: '/logos/windows-server	.png' },
-	{ name: 'Markdown', image: '/logos/markdown.png' },
+	{ name: "Git", image: "/logos/git.png" },
+	{ name: "VSCode", image: "/logos/vscode.png" },
+	{ name: "Terminal", image: "/logos/terminal.png" },
+	{ name: "npm", image: "/logos/npm.png" },
+	{ name: "Docker", image: "/logos/docker.png" },
+	{ name: "Linux", image: "/logos/linux.png" },
+	{ name: "Windows Server", image: "/logos/windows-server	.png" },
+	{ name: "Markdown", image: "/logos/markdown.png" },
 ];
 
 const aprendiendo = [
-	{ name: 'Ciberseguridad', image: '/logos/ciberseguridad.png' },
+	{ name: "Ciberseguridad", image: "/logos/ciberseguridad.png" },
 ];
 ---
 
-<section id="stack" class="min-h-screen flex items-center justify-center px-4">
+<section id="stack" class="py-20 flex items-center justify-center">
 	<div class="w-full">
-		<h2 class="text-3xl md:text-5xl font-bold text-center mb-4 neon-white">
+		<h2 class="text-4xl md:text-6xl font-bold text-center mb-4 neon-white">
 			Stack Tecnológico
 		</h2>
 		<p class="text-center text-gray-400 mb-12 text-lg">
 			Technologías y herramientas que utilizo
 		</p>
-		
+
 		<!-- Grid de 4 cards (2x2) -->
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 			<!-- Card Frontend -->
 			<div class="glass rounded-xl p-4">
-				<h3 class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title">Frontend</h3>
+				<h3
+					class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title"
+				>
+					Frontend
+				</h3>
 				<div class="grid grid-cols-3 gap-4">
-					{frontend.map((tech) => (
-						<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-							<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-								<img src={tech.image} alt={tech.name} class="w-14 h-14 object-contain" />
+					{
+						frontend.map((tech) => (
+							<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
+								<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+									<img
+										src={tech.image}
+										alt={tech.name}
+										class="w-14 h-14 object-contain"
+									/>
+								</div>
+								<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
+									{tech.name}
+								</h4>
 							</div>
-							<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
-								{tech.name}
-							</h4>
-						</div>
-					))}
+						))
+					}
 				</div>
 			</div>
 
 			<!-- Card Backend -->
 			<div class="glass rounded-xl p-4">
-				<h3 class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title">Backend</h3>
+				<h3
+					class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title"
+				>
+					Backend
+				</h3>
 				<div class="grid grid-cols-3 gap-4">
-					{backend.map((tech) => (
-						<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-							<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-								<img src={tech.image} alt={tech.name} class="w-12 h-12 object-contain" />
+					{
+						backend.map((tech) => (
+							<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
+								<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+									<img
+										src={tech.image}
+										alt={tech.name}
+										class="w-12 h-12 object-contain"
+									/>
+								</div>
+								<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
+									{tech.name}
+								</h4>
 							</div>
-							<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
-								{tech.name}
-							</h4>
-						</div>
-					))}
+						))
+					}
 				</div>
 			</div>
 
 			<!-- Card Herramientas -->
 			<div class="glass rounded-xl p-4">
-				<h3 class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title">Herramientas</h3>
+				<h3
+					class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title"
+				>
+					Herramientas
+				</h3>
 				<div class="grid grid-cols-3 gap-4">
-					{herramientas.map((tech) => (
-						<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-							<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-								<img src={tech.image} alt={tech.name} class="w-12 h-12 object-contain" />
+					{
+						herramientas.map((tech) => (
+							<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
+								<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+									<img
+										src={tech.image}
+										alt={tech.name}
+										class="w-12 h-12 object-contain"
+									/>
+								</div>
+								<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
+									{tech.name}
+								</h4>
 							</div>
-							<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
-								{tech.name}
-							</h4>
-						</div>
-					))}
+						))
+					}
 				</div>
 			</div>
 
 			<!-- Card Aprendiendo -->
 			<div class="glass rounded-xl p-4">
-				<h3 class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title">Aprendiendo</h3>
+				<h3
+					class="text-3xl md:text-4xl font-bold mb-6 text-center stack-title"
+				>
+					Aprendiendo
+				</h3>
 				<div class="grid grid-cols-3 gap-4">
-					{aprendiendo.map((tech) => (
-						<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-							<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
-								<img src={tech.image} alt={tech.name} class="w-12 h-12 object-contain" />
+					{
+						aprendiendo.map((tech) => (
+							<div class="text-center hover:scale-110 transition-all duration-300 cursor-pointer group">
+								<div class="mb-2 transform group-hover:scale-110 transition-transform duration-300 flex justify-center">
+									<img
+										src={tech.image}
+										alt={tech.name}
+										class="w-12 h-12 object-contain"
+									/>
+								</div>
+								<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
+									{tech.name}
+								</h4>
 							</div>
-							<h4 class="text-xs font-semibold text-gray-200 group-hover:text-purple-300 transition-colors">
-								{tech.name}
-							</h4>
-						</div>
-					))}
+						))
+					}
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="mt-12 glass rounded-xl p-6 mx-auto">
 			<p class="text-gray-300 text-center">
-				<strong>Objetivo futuro:</strong> Especialización en <span class="text-purple-400 font-semibold">Ciberseguridad</span>
+				<strong>Objetivo futuro:</strong> Especialización en <span
+					class="text-purple-400 font-semibold">Ciberseguridad</span
+				>
 			</p>
 		</div>
 	</div>

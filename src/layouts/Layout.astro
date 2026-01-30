@@ -5,64 +5,132 @@
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Geist+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
-		
-		<title>Dorian García - Portfolio ASIR</title>
-	</head>
-	
-	<body class="font-sans antialiased text-white min-h-screen relative overflow-x-hidden">
-		
-		<div class="fixed inset-0 -z-10 overflow-hidden bg-space">
-			<div id="stars"></div>
-			<div id="stars2"></div>
-			<div id="stars3"></div>
-		</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
 
-		<main class="relative z-10 max-w-5xl mx-auto">
-			<slot />
-		</main>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Geist+Mono:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-	</body>
+        <title>Dorian García - Portfolio ASIR</title>
+    </head>
+
+    <body
+        class="font-sans antialiased text-white min-h-screen relative overflow-x-hidden"
+    >
+        <div class="fixed inset-0 -z-10 overflow-hidden bg-space">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
+
+        <main class="relative z-10 max-w-5xl mx-auto">
+            <slot />
+        </main>
+    </body>
 </html>
 
+<script>
+    import Lenis from "lenis";
+
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        direction: "vertical", // vertical, horizontal
+        gestureDirection: "vertical", // vertical, horizontal, both
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+</script>
+
 <style lang="scss" is:global>
+    /* LENIS SCROLL CSS */
+    html.lenis,
+    html.lenis body {
+        height: auto;
+    }
+
+    .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+        overflow: hidden;
+    }
+
+    .lenis.lenis-scrolling iframe {
+        pointer-events: none;
+    }
     // 1. Función de sombras (Sin cambios)
     @function multiple-box-shadow($n) {
-        $value: '#{random(2000)}px #{random(2000)}px #FFF';
+        $value: "#{random(2000)}px #{random(2000)}px #FFF";
         @for $i from 2 through $n {
-            $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+            $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
         }
         @return unquote($value);
     }
 
     // 2. Generamos estrellas (Sin cambios)
-    $shadows-small:  multiple-box-shadow(700);
+    $shadows-small: multiple-box-shadow(700);
     $shadows-medium: multiple-box-shadow(200);
-    $shadows-big:    multiple-box-shadow(100);
+    $shadows-big: multiple-box-shadow(100);
 
     // 3. Estilos globales
     :root {
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
     }
-    
+
+    // FIX: Eliminar fondo blanco en overscroll móvil
+    html {
+        background-color: #05070a;
+        min-height: 100vh;
+        min-height: 100dvh; // Soporte para móviles modernos
+    }
+
+    body {
+        // NO background-color aquí para que se vea el starfield
+        min-height: 100vh;
+        min-height: 100dvh;
+        overscroll-behavior-y: none; // Prevenir el efecto rebote si es necesario
+    }
+
     // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
     .bg-space {
-
-        background: radial-gradient(ellipse at bottom, #1e2d3e 13%, rgb(9, 10, 15) 57%);
+        background: radial-gradient(
+            ellipse at bottom,
+            #1e2d3e 13%,
+            rgb(9, 10, 15) 57%
+        );
     }
 
     // Animación de subida
     @keyframes animStar {
-        from { transform: translateY(0px); }
-        to   { transform: translateY(-2000px); }
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-2000px);
+        }
     }
 
     // Configuración de estrellas
@@ -72,7 +140,7 @@
         background: transparent;
         box-shadow: $shadows-small;
         animation: animStar 50s linear infinite;
-        
+
         &:after {
             content: " ";
             position: absolute;
@@ -90,7 +158,7 @@
         background: transparent;
         box-shadow: $shadows-medium;
         animation: animStar 100s linear infinite;
-        
+
         &:after {
             content: " ";
             position: absolute;
@@ -108,7 +176,7 @@
         background: transparent;
         box-shadow: $shadows-big;
         animation: animStar 150s linear infinite;
-        
+
         &:after {
             content: " ";
             position: absolute;
@@ -125,38 +193,38 @@
         width: 8px;
     }
     ::-webkit-scrollbar-track {
-        background: #090A0F;
+        background: #090a0f;
     }
     ::-webkit-scrollbar-thumb {
         background: #4a5568;
         border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-        background:rgb(113, 128, 150);
+        background: rgb(113, 128, 150);
     }
-    
-		/* Glassmorphism limpio con iluminación de órbita */
-	.glass {
-		/* Hice el fondo un pelín más oscuro (0.5) para que el brillo destaque más */
-		background: rgba(18, 20, 30, 0.331); 
-		backdrop-filter: blur(2px);
-		border: 1px solid rgba(255, 255, 255, 0.08);
-		
-		/* NUEVO: Iluminación ambiental basada en el color #1b2735 */
-		/* Capa 1 (Ancha y suave): Crea el resplandor general */
-		/* Capa 2 (Estrecha): Ancla la tarjeta al fondo */
-		box-shadow: 
-			0 20px 40px -10px rgba(27, 39, 53, 0.5),
-			0 5px 15px -3px rgba(27, 39, 53, 0.3);
-		
-		/* Opcional: una transición suave por si añades efectos hover luego */
-		transition: all 0.3s ease-in-out;
-	}
+
+    /* Glassmorphism limpio con iluminación de órbita */
+    .glass {
+        /* Hice el fondo un pelín más oscuro (0.5) para que el brillo destaque más */
+        background: rgba(18, 20, 30, 0.331);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        /* NUEVO: Iluminación ambiental basada en el color #1b2735 */
+        /* Capa 1 (Ancha y suave): Crea el resplandor general */
+        /* Capa 2 (Estrecha): Ancla la tarjeta al fondo */
+        box-shadow:
+            0 20px 40px -10px rgba(27, 39, 53, 0.5),
+            0 5px 15px -3px rgba(27, 39, 53, 0.3);
+
+        /* Opcional: una transición suave por si añades efectos hover luego */
+        transition: all 0.3s ease-in-out;
+    }
 
     /* Estilo para texto neón blanco */
     .neon-white {
         color: #ffffff;
-        text-shadow: 
+        text-shadow:
             0 0 5px #ffffff44,
             0 0 8px #ffffff44,
             0 0 15px #ffffff44;
@@ -164,7 +232,7 @@
     }
 
     .neon-white:hover {
-        text-shadow: 
+        text-shadow:
             0 0 4px #ffffff44,
             0 0 6px #ffffff44,
             0 0 15px #ffffff44,
@@ -176,7 +244,7 @@
     /* Estilo para menú móvil */
     .mobile-menu-link:hover {
         color: #7dd3fc !important;
-        text-shadow: 
+        text-shadow:
             0 0 5px rgba(125, 211, 252, 0.5),
             0 0 10px rgba(125, 211, 252, 0.3),
             0 0 15px rgba(125, 211, 252, 0.2);
