@@ -24,7 +24,7 @@
     <body
         class="font-sans antialiased text-white min-h-screen relative overflow-x-hidden"
     >
-        <div class="fixed inset-0 -z-10 overflow-hidden bg-space">
+        <div class="starfield-container bg-space">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
@@ -100,15 +100,14 @@
         font-family: "Lato", sans-serif;
     }
 
-    // FIX: Eliminar fondo blanco en overscroll móvil
+    // FIX: Sin background en html para que el starfield extendido lo cubra todo
     html {
-        background-color: #05070a;
         min-height: 100vh;
         min-height: 100dvh; // Soporte para móviles modernos
     }
 
     body {
-        // NO background-color aquí para que se vea el starfield
+        // NO background aquí para que se vea el starfield
         min-height: 100vh;
         min-height: 100dvh;
         overscroll-behavior-y: none; // Prevenir el efecto rebote si es necesario
@@ -121,6 +120,18 @@
             #1e2d3e 13%,
             rgb(9, 10, 15) 57%
         );
+    }
+
+    // Contenedor de estrellas extendido para cubrir overscroll
+    .starfield-container {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        bottom: -100vh;
+        z-index: -10;
+        overflow: hidden;
+        // Extendemos el contenedor 100vh arriba y abajo para cubrir overscroll
     }
 
     // Animación de subida
