@@ -102,13 +102,16 @@
 
     // FIX: Aplicar el mismo gradiente en html para el overscroll móvil
     html {
+        background-color: #090a0f; // Color sólido de fallback para evitar flash blanco
         background: radial-gradient(
             ellipse at bottom,
             #1e2d3e 13%,
             rgb(9, 10, 15) 57%
         );
+        background-attachment: fixed; // Fija el fondo para mejor rendimiento
         min-height: 100vh;
         min-height: 100dvh;
+        will-change: auto; // Optimización de rendering
     }
 
     body {
