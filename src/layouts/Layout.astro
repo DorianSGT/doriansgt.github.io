@@ -100,17 +100,22 @@
         font-family: "Lato", sans-serif;
     }
 
-    // FIX: Sin background en html para que el starfield extendido lo cubra todo
+    // FIX: Aplicar el mismo gradiente en html para el overscroll móvil
     html {
+        background: radial-gradient(
+            ellipse at bottom,
+            #1e2d3e 13%,
+            rgb(9, 10, 15) 57%
+        );
         min-height: 100vh;
-        min-height: 100dvh; // Soporte para móviles modernos
+        min-height: 100dvh;
     }
 
     body {
-        // NO background aquí para que se vea el starfield
+        background: transparent; // Transparente para que se vea el html debajo
         min-height: 100vh;
         min-height: 100dvh;
-        overscroll-behavior-y: none; // Prevenir el efecto rebote si es necesario
+        overscroll-behavior-y: none;
     }
 
     // --- AQUÍ ESTÁ EL CAMBIO CLAVE ---
