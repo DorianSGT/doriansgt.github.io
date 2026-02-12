@@ -1,23 +1,120 @@
 [
-    {
-      "titulo": "Hardening de Servidor Linux",
-      "descripcion": "Configuración de seguridad en Ubuntu Server: SSH keys, Fail2Ban y Firewall UFW configurado para denegar todo el tráfico entrante por defecto.",
-      "tags": ["Linux", "Seguridad", "Bash"],
-      "link": "https://github.com/tu-usuario/proyecto1",
-      "github": "https://github.com/tu-usuario/repo-hardening"
-    },
-    {
-      "titulo": "Despliegue de Red con Docker",
-      "descripcion": "Creación de una red interna con contenedores aislados usando Docker Compose. Incluye servidor web Nginx y base de datos MariaDB.",
-      "tags": ["Docker", "Redes", "Contenedores"],
-      "link": "#",
-      "github": "https://github.com/tu-usuario/repo-hardening"
-    },
-    {
-      "titulo": "Script de Backup Automático",
-      "descripcion": "Script en Python que realiza copias de seguridad incrementales de directorios críticos y los cifra con GPG antes de enviarlos a la nube.",
-      "tags": ["Python", "Scripting", "Automatización"],
-      "link": "#",
-      "github": "https://github.com/tu-usuario/repo-hardening"
-    }
+  {
+    "titulo": "Explotación de Vulnerabilidades Web",
+    "descripcion": "Desarrollo y explotación de vulnerabilidades SQL Injection y XSS (Reflejado y Persistente) en aplicaciones Flask y PHP. Incluye payloads de ataque y técnicas de mitigación con parametrización y sanitización.",
+    "imagen": "/img/proyectos/web-vulnerabilities.png",
+    "tags": [
+      "Seguridad",
+      "Flask",
+      "PHP",
+      "SQL Injection",
+      "XSS"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/INYECCION_SQL_XSS",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/INYECCION_SQL_XSS"
+  },
+  {
+    "titulo": "Simulación de Ataques de Fuerza Bruta",
+    "descripcion": "Simulación de ataques HTTP y SSH con Hydra. Incluye instalación de DVWA con Docker, generación de diccionarios con Pydictor y estrategias de mitigación con Fail2Ban.",
+    "imagen": "/img/proyectos/brute-force.png",
+    "tags": [
+      "Seguridad",
+      "Hydra",
+      "Docker",
+      "Pentesting"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/ATAQUE_HTTP_SSH",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/ATAQUE_HTTP_SSH"
+  },
+  {
+    "titulo": "Infraestructura de Redes Completa",
+    "descripcion": "Configuración de servicios de red en Debian Server: DNS con BIND9, DHCP con Kea, servidor web Apache y servidor FTP. Incluye 7 prácticas documentadas en PDF.",
+    "imagen": "/img/proyectos/network.png",
+    "tags": [
+      "Redes",
+      "Linux",
+      "BIND9",
+      "Apache",
+      "DHCP",
+      "FTP"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/2-REDES",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/2-REDES"
+  },
+  {
+    "titulo": "CRUD PHP con MySQL",
+    "descripcion": "Aplicación web PHP para gestión de videojuegos, jugadores y partidas. Conexión a base de datos MySQL con operaciones CRUD completas (Create, Read, Update, Delete) y demo en video.",
+    "imagen": "/img/proyectos/php-crud.png",
+    "tags": [
+      "PHP",
+      "MySQL",
+      "CRUD",
+      "Full-Stack"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/CONEXION_BBDD_PHP",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/CONEXION_BBDD_PHP"
+  },
+  {
+    "titulo": "Ejercicios de Programación Python",
+    "descripcion": "Colección de 27 ejercicios resueltos de algoritmos y estructuras de datos en Python de la plataforma Jutge. Incluye problemas de diferentes niveles de dificultad.",
+    "imagen": "/img/proyectos/python.png",
+    "tags": [
+      "Python",
+      "Algoritmos",
+      "Programming"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/4-PYTHON/JUTGE_PYTHON",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/4-PYTHON/JUTGE_PYTHON"
+  },
+  {
+    "titulo": "Juego de Dados en PHP",
+    "descripcion": "Aplicación web interactiva de juego de dados desarrollada en PHP. Incluye lógica de juego, interfaz dinámica y demo en video mostrando el funcionamiento completo del sistema.",
+    "imagen": "/img/proyectos/dice-game.png",
+    "tags": [
+      "PHP",
+      "Web Development",
+      "JavaScript"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/JUEGO_DADOS",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/JUEGO_DADOS"
+  },
+  {
+    "titulo": "Base de Datos MongoDB",
+    "descripcion": "Implementación completa de MongoDB con Docker. Incluye esquema de comercio electrónico, consultas avanzadas, agregaciones y uso de MongoDB Compass para gestión visual.",
+    "imagen": "/img/proyectos/mongodb.png",
+    "tags": [
+      "MongoDB",
+      "Docker",
+      "NoSQL",
+      "Database"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MONGODB",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MONGODB"
+  },
+  {
+    "titulo": "Base de Datos PostgreSQL",
+    "descripcion": "Sistema de gestión de equitación con PostgreSQL. Incluye gestión de usuarios y roles, consultas avanzadas, uso de JSON, arrays, vistas materializadas, herencia de tablas y administración con pgAdmin.",
+    "imagen": "/img/proyectos/postgresql.png",
+    "tags": [
+      "PostgreSQL",
+      "SQL",
+      "Database",
+      "pgAdmin"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/POSTGRESQL",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/POSTGRESQL"
+  },
+  {
+    "titulo": "Gestión de Usuarios MySQL",
+    "descripcion": "Administración completa de usuarios y permisos en MySQL. Incluye creación de usuarios, asignación de privilegios con GRANT/REVOKE, control de acceso basado en roles y gestión de seguridad de base de datos.",
+    "imagen": "/img/proyectos/mysql-users.png",
+    "tags": [
+      "MySQL",
+      "Seguridad",
+      "Database",
+      "User Management"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MYSQL_GESTION_USUARIOS",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MYSQL_GESTION_USUARIOS"
+  }
 ]

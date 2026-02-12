@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#3e454c">
+    <title>Editar Perfil</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Sandstone Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Datatables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <!-- Bootstrap social button library -->
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <!-- Bootstrap select -->
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <!-- Bootstrap file input -->
+    <link rel="stylesheet" href="css/fileinput.min.css">
+    <!-- Awesome Bootstrap checkbox -->
+    <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+    <!-- Admin Stye -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .errorWrap {
+      padding: 10px;
+      margin: 0 0 20px 0;
+      background: #dd3d36;
+      color:#fff;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      }
+      .succWrap{
+      padding: 10px;
+      margin: 0 0 20px 0;
+      background: #5cb85c;
+      color:#fff;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      }
+      .msgError{
+      padding: 10px;
+      margin: 0 0 20px 0;
+      background: red;
+      color:#fff;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      }
+      .scroller {
+      height: 3em;
+      line-height: 3em;
+      position: relative;
+      overflow: hidden;
+      }
+            .scroller > span {
+      position: absolute;
+      top: 0;
+      animation: slide 21s infinite;
+      font-weight: bold;
+      animation-delay: 2s;
+      }
+      @keyframes slide {
+        0%  { top: -0em;} 
+16.666666666667%  { top: -3em;} 
+33.333333333333%  { top: -6em;} 
+50%  { top: -9em;} 
+66.666666666667%  { top: -12em;} 
+83.333333333333%  { top: -15em;} 
+
+      }
+    </style>
+  </head>
+  <body onload="showNotis()">
+        <div class="brand clearfix">
+<h4 class="pull-left text-uppercase" style="margin:20px 0px 0px 20px"><i class="fa fa-user"></i>&nbsp; SANTIGARCIA15087@GMAIL.COM</h4>
+		<span class="menu-btn" style="background-color: #f77f00"><i class="fa fa-bars"></i></span>
+		<ul class="ts-profile-nav">
+			
+			<li class="ts-account">
+				<a href="#" style="background-color: #f77f00"><img src="img/rompecabezas.png" class="ts-avatar hidden-side" alt=""> Mi cuenta <i class="fa fa-angle-down hidden-side"></i></a>
+				<ul>
+					<li><a href="change-password.php">Cambiar contraseña</a></li>
+					<li><a href="logout.php">Salir</a></li>
+				</ul>
+			</li>
+		</ul>
+				<ul class="ts-profile-nav2">
+			<li class="ts-account">&nbsp;</li>
+
+		</ul>
+		<ul title="Escucha Enhorabuena de la buena Radio" class="ts-profile-nav2">
+			<li class="ts-account">
+				<a target="_blank" href="./radio" style="background-color: #f77f00"><img src="img/al-aire.png" class="ts-avatar hidden-side" alt="">Radio</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<script type="text/javascript">
+	
+ var cols = document.getElementsByClassName('brand');
+  for(i = 0; i < cols.length; i++) {
+    cols[i].style.backgroundColor = '#eae2b7';
+  }
+</script>
+    <div class="ts-main-content">
+      
+	<nav class="ts-sidebar">
+			<ul class="ts-sidebar-menu">
+			
+			<li class="ts-label"></li>
+							<li><a href="profile.php"><i class="fa fa-user"></i> &nbsp;Mi Perfil</a>
+				</li>
+							<li><a href="clan.php"><i class="fa fa-users"></i> &nbsp;Mi Clan</a>
+				</li>
+						<li><a href="micromo.php"><i class="fa fa-plus-square"></i> &nbsp;Mi Cromo</a>
+			</li>
+						<li><a href="mialbum.php"><i class="fa fa-book"></i> &nbsp;Mi Album</a>
+			</li>
+						<li><a href="abrirsobre.php"><i class="fa fa-envelope"></i> &nbsp;Abrir sobre</a>
+			</li>
+						<li><a href="ranking.php"><i class="fa fa-globe"></i> &nbsp;Mi Cartilla</a>
+			</li>
+						<li><a href="mimercado.php"><i class="fa fa-hand-o-right"></i> &nbsp;Mercambios</a>
+			</li>
+						<li><a href="mimochila.php"><i class="fa fa-briefcase"></i> &nbsp;Mi Mochila</a>
+			</li>
+						<li><a href="notification.php"><i class="fa fa-bell"></i> &nbsp;Notificaciones<sup style="color:red">*</sup></a>
+			</li>
+						<li><a href="vota_juicio.php"><i class="fa fa-balance-scale"></i> &nbsp;Juicio</a>
+			</li>
+						<li><a href="miQR.php"><i class="fa fa-th"></i> &nbsp;Mi QR</a>
+			</li>
+						<li><a href="isa/feed/?de=ZNE" target="_blank"><i class="fa fa-male"></i> &nbsp;¿Cómo fue la clase?</a>
+			</li>
+			</ul>
+			<p class="text-center" style="color:#ffffff; margin-top: 100px;">© Gilbert</p>
+		</nav>
+
+		<script type="text/javascript">
+	
+ var cols = document.getElementsByClassName('ts-sidebar');
+  for(i = 0; i < cols.length; i++) {
+    cols[i].style.backgroundColor = '#f77f00';
+  }
+</script>
+
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          <div class="alert alert-primary scroller"><span>1.-Encuestas de Satisfacción [31-03-2025]<br/>2.-Reunión familias Infantil 3º trimestre[03/04(04:45)-03/04(05:45)]<br/>3.-Creciendo en familia: Cuaresma con Godly PlayCreciendo en familia: Cuaresma con Godly Play[04/04(04:45)-04/04(06:15)]<br/>4.-Preparación actividades de verano SalleJovenPreparación actividades de verano SalleJoven [05-04-2025]<br/>5.-Convivencia Familiar Primera Comunión 4º[05/04(11:00)-05/04(06:00)]<br/>6.-V Domingo Cuaresma [06-04-2025]</span><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button></div>                    <div class='alert alert-info alert-dismissible'>
+              <button type="button" class="close" data-dismiss="alert">&times;</button> 
+              <img align = "center" class="img-fluid mx-auto d-block" 
+              src="img/comics/image.png". alt="Chania">
+            </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Perfil</div>
+                                                                                                    <div class="panel-body">
+                      <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                        <input type="hidden" name="csrf_token" value="1f2dc39ab4a8e86c4113b30722cdc1f6b7fce458270b8e3b40729c38fe87313d">
+                        <div class="form-group">
+                          <div class="col-sm-4">
+                          </div>
+                          <div class="col-sm-4 text-center">
+                            <img src="images/ad860fbd8192f509e1a16f72812f915499186aa5.jpg" width="200" height="200" style="border-radius:50%;">
+                                                        <br><br><input type="file" name="fotoperfil" style="display: unset !important;">
+                          </div>
+                          <div class="col-sm-4">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Nombre<span style="color:red">*</span></label>
+                          <div class="col-sm-4">
+                            <input type="text" name="name" class="form-control" required value="Dorian Santiago ">
+                          </div>
+                          <label class="col-sm-2 control-label">1º Apellido<span style="color:red">*</span></label>
+                          <div class="col-sm-4">
+                            <input type="text" name="APELLIDO1" class="form-control" required value="Garc&iacute;a">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">2º Apellido<span style="color:red">*</span></label>
+                          <div class="col-sm-4">
+                            <input type="text" name="APELLIDO2" class="form-control" required value="Toru&ntilde;o">
+                          </div>
+                          <label class="col-sm-2 control-label">CURSO<span style="color:red"></span></label>
+                          <div class="col-sm-4">
+                                                        <input type="text" name="Curso" class="form-control" readonly="readonly" disabled= "disabled" value="ASIR1, código clase de hoy: ZNE">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-8 col-sm-offset-2">
+                            <button class="btn btn-primary" name="submit" type="submit">Guardar cambios</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Loading Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/fileinput.js"></script>
+    <script src="js/chartData.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {          
+      setTimeout(function() {
+      	$('.succWrap').slideUp("slow");
+      }, 3000);
+      });
+      function showNotis()
+      {		
+      	
+      }
+    </script>
+  </body>
+</html>

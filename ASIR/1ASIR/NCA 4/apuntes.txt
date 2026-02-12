@@ -1,0 +1,342 @@
+1. Hacer una pagina principal la cual contiene en botones los distintos tipos de placa base, 
+cada boton lleva a una pagina distinta con dicho modelo de placa base y y en esta pagina se veria 
+la variedad con las placas bases, precios y demas
+
+2. Al entrar en cada placa base q salte una alerta de sweetalert indicando las caracteristicas de esa 
+placa base
+
+Fernando conde de loro hace completos a euro.
+
+
+
+atx1 info (resumir)
+
+    Model Name MPG B550 GAMING PLUS
+    CPU Support Supports AM4 socket 3rd Gen AMD Ryzen™ Processors,and future AMD Ryzen™ processors with BIOS update
+    CPU Socket AMD Socket AM4
+    Chipset AMD B550 Chipset
+    Graphics Interface 1x PCI-E 4.0/3.0 x16 slot + 1x PCI-E 3.0 x16 slot Supports 2-Way AMD CrossFire™ Technology
+    Display Interface DisplayPort, HDMI – Requires Processor Graphics
+    Memory Support 4 DIMMs, Dual Channel DDR4-4400(OC)
+    Storage 1x M.2 Gen4 x4 + 1x M.2 Gen3 x4 slot 6x SATA 6Gb/s ports
+    USB ports 2x USB 3.2 Gen 2 10Gbps (1 Type-A + 1 Type-C)5x USB 3.2 Gen 1 5Gbps (4 Type-A + 1 Type-C)8x USB 2.0
+    LAN Realtek® RTL8111H Gigabit LAN
+    Audio8-Channel (7.1) HD Audio with Audio Boost
+
+
+    e-atx info (resumir)
+    
+    Chipset: X870E
+    CPU: Admite procesadores de escritorio AMD Ryzen™ serie 9000/8000/7000 Socket AM5
+    Memoria
+        4x DDR5 UDIMM, capacidad máxima de memoria 256 GB
+        Compatibilidad con memoria DDR5 9000 - 5600 (OC) MT/s / 5600 - 4800 (JEDEC) MT/s
+        Admite velocidad AMD POR y velocidad JEDEC
+        Admite overclocking de memoria y AMD EXPO TM
+        Admite modo de doble canal
+        Admite memoria sin ECC, sin búfer
+        Admite CUDIMM, solo modo de omisión del controlador de reloj*
+        * La compatibilidad con CUDIMM y la frecuencia de arranque POR pueden variar según la serie de la CPU, con overclocking manual disponible después del arranque. Es posible que algunas CPU no arranquen, pero las futuras actualizaciones del BIOS mejorarán la compatibilidad.
+        ** La compatibilidad de la memoria y las velocidades admitidas pueden variar según la CPU y la configuración de la memoria. Para obtener información detallada, consulte la Lista de compatibilidad de memoria disponible en la página de soporte del producto o visite https://www.msi.com/support/.
+    Gráficos
+        2 puertos USB4 ® DisplayPort tipo C , compatible con DisplayPort 1.4 con HBR3 a través de USB tipo C, resolución máxima de 4K a 60 Hz*
+        * Disponible solo en procesadores con gráficos integrados. Las especificaciones de gráficos pueden variar según la CPU instalada.
+    Ranuras
+        2 ranuras PCI-E x16
+        1 ranura PCI-E x4
+        PCI_E1 Gen PCIe 5.0 admite hasta x16 (desde la CPU)
+        PCI_E2 Gen PCIe 5.0 admite hasta x8 (desde la CPU)
+        PCI_E3 Gen PCIe 4.0 admite hasta x4 (desde el chipset)
+        Ranuras PCI_E1 y PCI_E2
+            Admite hasta PCIe 5.0 x16/ x0 o x8/ x8 (para procesadores Ryzen™ serie 9000/ 7000)
+            Admite hasta PCIe 4.0 x8/ x0 (para procesadores Ryzen™ serie 8700/ 8600/ 8400)
+            Admite hasta PCIe 4.0 x4/ x0 (para procesadores Ryzen™ serie 8500/ 8300)
+        Ranura PCI_E3
+            Admite hasta PCIe 4.0 x4
+    Audio
+        Códec Realtek ® ALC4082 + DAC/HPA combinado ESS9219Q
+        Audio de alto rendimiento USB de 7.1 canales
+        Admite salida S/PDIF
+        Admite reproducción de hasta 32 bits/384 kHz en el panel frontal
+    Almacenamiento
+        7x M.2
+        M.2_1 Fuente (desde CPU) admite hasta PCIe 5.0 x4, admite dispositivos 2280/2260
+        M.2_2 Fuente (desde CPU) admite hasta PCIe 5.0 x4, admite dispositivos 2280/2260
+        M.2_3 Fuente (desde chipset) admite hasta PCIe 4.0 x4, admite dispositivos 22110/2280
+        M.2_4 Fuente (desde chipset) admite hasta PCIe 4.0 x2, admite dispositivos 2280/2260
+        M.2_5 Fuente (desde chipset) admite hasta PCIe 4.0 x4, admite dispositivos 2280/2260
+        4x SATA 6G
+        M.2_1 Fuente (a través de M.2 XPANDER-Z SLIDER GEN5) admite hasta PCIe 5.0 x4, admite dispositivos 2280
+        M.2_2 Fuente (a través de M.2 XPANDER-Z SLIDER GEN5) admite hasta PCIe 5.0 x4, admite 2280 dispositivos
+    Raid
+        Admite RAID 0, RAID 1 y Raid 10 para dispositivos de almacenamiento SATA
+        Admite RAID 0, RAID 1 y Raid 10 para dispositivos de almacenamiento M.2 NVMe
+    USB
+        4x USB 2.0 (frontal)
+        4x USB 5 Gbps Tipo A (frontal)
+        8x USB 10 Gbps
+        Tipo A (trasero) 5x USB 10 Gbps Tipo C (trasero)
+        1x USB 10 Gbps Tipo C (frontal) 
+        1x USB 20 Gbps Tipo C (frontal)
+        2x USB 40 Gbps Tipo C (trasero)
+    Redes
+        1 LAN Marvell® AQC113CS de 10 Gbps
+        1 LAN Realtek® 8126 de 5 Gbps
+        Solución Wi-Fi 7
+        El módulo inalámbrico está preinstalado en la ranura M.2 (Key-E)
+        Admite MU-MIMO TX/RX, 2,4 GHz/5 GHz/6 GHz* (320 MHz) hasta 5,8 Gbps
+        Admite 802.11 a/b/g/n/ac/ax/be
+        Admite Bluetooth ® 5.4**, MLO, 4KQAM
+    E/S Interno
+        1x conector de alimentación (ATX_PWR)
+        2x conector de alimentación (CPU_PWR)
+        1x conector de alimentación (PCIE_PWR de 8 pines)
+        1x conector de carga rápida tipo C frontal (PD_PWR1)
+        1x ventilador de CPU
+        2x ventilador combinado (ventilador Pump_Sys)
+        1x cabezal de conexión EZ (JAF_2)
+        2x panel frontal (JFP)
+        1x intrusión de chasis (JCI)
+        1x audio frontal (JAUD)
+        2x conectores de sensor térmico (T_SEN)
+        1x conector de controlador de ajuste (JDASH)
+        1x conector de LED RGB V2 direccionable (JARGB_V2)
+        Punto de control V
+        4x puertos USB 2.0
+        4x puertos USB 5 Gbps tipo A
+        1x puertos USB 10 Gbps tipo C
+        1x puertos USB 20 Gbps tipo C
+    LED
+        1x Tablero dinámico III
+        1x LED de depuración EZ Digit
+        1x Interruptor de control LED EZ
+    Dimensiones
+        E-ATX: 304,8 mm x 277 mm
+
+
+
+swtx (resumir)
+Aquí tienes la traducción de la información proporcionada:
+
+### Estado del Artículo
+- Nuevo: Otros (ver descripción del artículo)
+
+### Notas del Vendedor
+- “OEM Sin embalaje original. Se entrega sellado en una bolsa estática”
+
+### Tipo de Almacenamiento
+- DDR3 SDRAM
+
+### Número de Fabricante
+- H8QGI+F
+
+### Marca
+- Supermicro
+
+### Modelo
+- H8QGI+F
+
+### Tipo de Socket
+- Socket G34
+
+### Características Especiales
+- Chipset de video integrado
+
+### Número de Zócalos de Memoria
+- 32
+
+### Conexiones de Entrada/Salida
+- D-Sub, Ethernet (RJ-45), VGA
+
+### Adecuado para
+- Gaming, trabajos informáticos ocasionales, diseño gráfico
+
+### Marca de CPU Compatible
+- Intel
+
+### Factor de Forma
+- SWTX
+
+### EAN
+- 0672042067046
+
+
+
+
+atx2 (resumir)
+
+CPU
+Intel® Socket LGA1700 for 13th Gen Intel® Core™ & 12th Gen Intel® Core™, Pentium® Gold and Celeron® Processors*
+Supports Intel® Turbo Boost Technology 2.0 and Intel® Turbo Boost Max Technology 3.0**
+* Refer to www.asus.com for CPU support list.
+** Intel® Turbo Boost Max Technology 3.0 support depends on the CPU types.
+Chipset
+Intel® B760 Chipset
+Memory
+4 x DIMM, Max. 128GB, DDR4 5066(OC)/5000(OC)/4800(OC)/4600(OC)/4400(OC)/4266(OC)/4000(OC)/3733(OC)/3600(OC)/3466(OC)/3400(OC)/3333(OC)/3200/3000/2933/2800/2666/2400/2133 Non-ECC, Un-buffered Memory*
+Dual Channel Memory Architecture
+Supports Intel® Extreme Memory Profile (XMP)
+OptiMem
+* Supported memory types, data rate (speed), and number of DRAM modules vary depending on the CPU and memory configuration, for more information please refer to CPU/Memory Support list under the Support tab of product information site or visit https://www.asus.com/support/.
+Graphics
+1 x DisplayPort**
+1 x VGA port
+1 x HDMI® port***
+* Graphics specifications may vary between CPU types. Please refer to www.intel.com for any updates.
+** Supports max. 4K@60Hz as specified in DisplayPort 1.4.
+*** Supports 4K@60Hz as specified in HDMI® 2.1.
+Expansion Slots
+Intel® 13th & 12th Gen Processors*
+1 x PCIe 5.0 x16 slot
+Intel® B760 Chipset
+1 x PCIe 4.0 x16 slot (supports x4 mode)
+2 x PCIe 3.0 x1 slots
+Note: To ensure compatibility of the device installed, please refer to https://www.asus.com/support/ for the list of supported peripherals.
+StorageTotal supports 3 x M.2 slots and 4 x SATA 6Gb/s ports*
+Intel® 13th & 12th Gen Processors
+M.2_1 slot (Key M), type 2242/2260/2280 (supports PCIe 4.0 x4 mode)
+Intel® B760 Chipset
+M.2_2 slot (Key M), type 2242/2260/2280/22110 (supports PCIe 4.0 x4 mode)
+M.2_3 slot (Key M), type 2242/2260/2280 (supports PCIe 4.0 x2 mode)
+4 x SATA 6Gb/s ports
+* Intel® Rapid Storage Technology supports SATA RAID 0/1/5/10.
+Ethernet
+1 x Realtek 2.5Gb Ethernet
+Wireless & Bluetooth®
+Vertical M.2 slot only (Key E, CNVi & PCIe)*
+* Wi-Fi module is sold separately.
+USB
+Rear USB (Total 6 ports)
+1 x USB 3.2 Gen 2x2 port (1 x USB Type-C®)
+2 x USB 3.2 Gen 2 ports (2 x Type-A)
+1 x USB 3.2 Gen 1 port (1 x Type-A)
+2 x USB 2.0 ports (2 x Type-A)
+Front USB (Total 7 ports)
+1 x USB 3.2 Gen 1 connector (supports USB Type-C®)
+1 x USB 3.2 Gen 1 header supports 2 additional USB 3.2 Gen 1 ports
+2 x USB 2.0 headers support 4 additional USB 2.0 ports
+Audio
+Realtek 7.1 Surround Sound High Definition Audio CODEC*
+- Supports: Jack-detection, Multi-streaming, Front Panel Jack-retasking
+- Supports up to 24-Bit/192 kHz playback
+Audio Features
+- Audio Shielding
+- Premium audio capacitors
+- Dedicated audio PCB layers
+* A chassis with an HD audio module in the front panel is required to support 7.1 Surround Sound audio output.
+Back Panel I/O Ports
+1 x USB 3.2 Gen 2x2 port (1 x USB Type-C®)
+2 x USB 3.2 Gen 2 ports (2 x Type-A)
+1 x USB 3.2 Gen 1 port (1 x Type-A)
+2 x USB 2.0 ports (2 x Type-A)
+1 x DisplayPort
+1 x VGA port
+1 x HDMI® port
+1 x Vertical M.2 slot (Key E)
+1 x Realtek 2.5Gb Ethernet port
+3 x Audio jacks
+Internal I/O Connectors
+Fan and Cooling related
+1 x 4-pin CPU Fan header
+1 x 4-pin AIO Pump header
+3 x 4-pin Chassis Fan headers
+Power related
+1 x 24-pin Main Power connector
+1 x 8-pin +12V Power connector
+Storage related
+3 x M.2 slots (Key M)
+4 x SATA 6Gb/s ports
+USB
+1 x USB 3.2 Gen 1 connector (supports USB Type-C® )
+1 x USB 3.2 Gen 1 header supports 2 additional USB 3.2 Gen 1 ports
+2 x USB 2.0 headers support 4 additional USB 2.0 ports
+Miscellaneous
+3 x Addressable Gen 2 headers
+1 x Aura RGB header
+1 x Clear CMOS header
+1 x COM Port header
+1 x Front Panel Audio header (AAFP)
+1 x S/PDIF Out header
+1 x SPI TPM header (14-1pin)
+1 x 20-3 pin System Panel header with Chassis intrude function
+1 x Thunderbolt™ (USB4®) header
+Special Features
+ASUS 5X PROTECTION III
+- DIGI+ VRM
+- LANGuard
+- Overvoltage Protection
+- SafeSlot Core+
+- Stainless-Steel Back I/O
+ASUS Q-Design
+- Q-DIMM
+- Q-LED Core
+- Q-Slot
+ASUS Thermal Solution
+- M.2 heatsink
+- VRM heatsink design
+ASUS EZ DIY
+- ProCool
+Aura Sync
+- Aura RGB header
+- Addressable Gen 2 headers
+Software Features
+ASUS Exclusive Software
+Armoury Crate
+- Aura Creator
+- Aura Sync
+- Fan Xpert 2+
+- Power Saving
+AI Suite 3
+- DIGI+ VRM
+- PC Cleaner
+ASUS CPU-Z
+Norton 360 Deluxe (60 Days Free Trial)
+WinRAR
+UEFI BIOS
+ASUS EZ DIY
+- ASUS CrashFree BIOS 3
+- ASUS EZ Flash 3
+- ASUS UEFI BIOS EZ Mode
+BIOS
+128 Mb Flash ROM, UEFI AMI BIOS
+Manageability
+WOL by PME, PXE
+Accessories
+Cables
+2 x SATA 6Gb/s cables
+Miscellaneous
+1 x I/O Shield
+1 x M.2 Rubber Package
+2 x Screw Packages for M.2 SSD
+Documentation
+1 x User guide
+Operating System
+Windows® 11, Windows® 10 64-bit
+Form Factor
+ATX Form Factor
+12 inch x 9.6 inch ( 30.5 cm x 24.4 cm )
+
+
+
+atx3(R)
+
+Especificaciones MSI X670E GAMING PLUS WIFI:
+Nombre del modelo X670E GAMING PLUS WIFI
+Compatibilidad con CPU Compatible con procesadores de escritorio AMD Ryzen™ serie 7000
+Zócalo de CPU AM5
+Conjunto de chips Conjunto de chips AMD X670
+Ranuras de expansión 1 ranura PCIe 5.0 x16, 1 ranura PCIe 4.0 x16, 1 ranura PCIe 3.0 x16, 1 ranura PCIe 3.0 x1
+Interfaz de pantalla compatible con 4K a 60 Hz como se especifica en HDMI™ 2.1, DisplayPort 1.4: requiere procesador de gráficos
+Soporte de memoria 4 DIMM, DDR5 de doble canal
+Almacenamiento
+1 ranura M.2 Gen5 x4 de 128 Gbps
+3 ranuras M.2 Gen4 x4 de 64 Gbps
+4 puertos SATA de 6 Gb/s
+Puertos USB
+1 USB 3.2 Gen 2x2 de 20 Gbps (1 tipo C)
+4 USB 3.2 Gen 2 de 10 Gbps (1 tipo C + 3 Tipo A)
+8x USB 3.2 Gen 1 5Gbps (8 Tipo-A)
+8x USB 2.0 (8 Tipo-A)
+LAN RTL8125BG LAN de 2,5 Gbps
+WiFi/BT AMD® Wi-Fi 6E, Bluetooth 5.3
+Audio Audio HD de 8 canales (7.1) con Audio Boost
