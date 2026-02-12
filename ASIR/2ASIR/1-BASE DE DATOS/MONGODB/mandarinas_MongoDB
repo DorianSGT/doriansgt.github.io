@@ -1,0 +1,16 @@
+use mandarinas 
+
+db.mandarinas.insertMany([
+  {"id_mandarina": 1,"color": "naranja intenso","tipo": "clementina","size": "M","fecha_recogida": new Date("2025-11-15")},
+  {"id_mandarina": 2,"color": "amarillo naranja","tipo": "satsuma","size": "L","fecha_recogida": new Date("2025-11-20")}
+])
+
+db.melocotones.insertMany([
+  {"id_melocoton": 100,"tipo": "de agua","suavidad": true},
+  {"id_melocoton": 101,"tipo": "de viña","suavidad": false}
+])
+
+db.caquis.insertMany([
+  {"id_caqui": 500,"id_mandarina": 1,"id_melocoton": 100,"color": "rojo brillante","pedunculo": false,"tiempo_maduracion": 5},
+  {"id_caqui": 501,"id_mandarina": 2, "id_melocoton": 101,"color": "anaranjado","pedunculo": true,"tiempo_maduracion": 10}
+])
