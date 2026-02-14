@@ -36,51 +36,7 @@
     </body>
 </html>
 
-<script>
-    import Lenis from "lenis";
-
-    const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-        direction: "vertical", // vertical, horizontal
-        gestureDirection: "vertical", // vertical, horizontal, both
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-</script>
-
 <style lang="scss" is:global>
-    /* LENIS SCROLL CSS */
-    html.lenis,
-    html.lenis body {
-        height: auto;
-    }
-
-    .lenis.lenis-smooth {
-        scroll-behavior: auto !important;
-    }
-
-    .lenis.lenis-smooth [data-lenis-prevent] {
-        overscroll-behavior: contain;
-    }
-
-    .lenis.lenis-stopped {
-        overflow: hidden;
-    }
-
-    .lenis.lenis-scrolling iframe {
-        pointer-events: none;
-    }
     // 1. Función de sombras (Sin cambios)
     @function multiple-box-shadow($n) {
         $value: "#{random(2000)}px #{random(2000)}px #FFF";
