@@ -1,5 +1,31 @@
 [
   {
+    "titulo": "AWS Despliegue Infraestructura",
+    "descripcion": "Despliegue completo de infraestructura en Amazon Web Services de un servidor Web, un Firewall Pfsense, una BBDD y su replica. Configuración de servicios cloud para alta disponibilidad y escalabilidad.",
+    "imagen": "/img/proyectos/aws-despliegue.png",
+    "tags": [
+      "AWS",
+      "Cloud",
+      "Infraestructura"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/blob/main/ASIR/2ASIR/6-PROYECTOS%20INTERMODULARES/AWS%20DESPLIEGUE%20INFRAESTRUCTURA.pdf",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/blob/main/ASIR/2ASIR/6-PROYECTOS%20INTERMODULARES/AWS%20DESPLIEGUE%20INFRAESTRUCTURA.pdf"
+  },
+  {
+    "titulo": "DMZ, Firewall, VPN y Proxy",
+    "descripcion": "Diseño e implementación de arquitectura de seguridad de red con una DMZ, dos Firewalls Pfsense, VPN con OpenVPN, un Proxy con Squid y un Cliente de la red interna.",
+    "imagen": "/img/proyectos/dmz-firewall.png",
+    "tags": [
+      "Seguridad",
+      "Redes",
+      "Firewall",
+      "VPN",
+      "Proxy"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/DMZ_FIREWALL_VPN_PROXY",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/3-SEGURIDAD/DMZ_FIREWALL_VPN_PROXY"
+  },
+  {
     "titulo": "Explotación de Vulnerabilidades Web",
     "descripcion": "Desarrollo y explotación de vulnerabilidades SQL Injection y XSS (Reflejado y Persistente) en aplicaciones Flask y PHP. Incluye payloads de ataque y técnicas de mitigación con parametrización y sanitización.",
     "imagen": "/img/proyectos/web-vulnerabilities.png",
@@ -55,6 +81,19 @@
     "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/CONEXION_BBDD_PHP"
   },
   {
+    "titulo": "Redis Cache con PHP y MySQL",
+    "descripcion": "Desarrollo de sistema de caché con Redis para PHP y MySQL. Mejora significativa de tiempos de respuesta en consultas a base de datos.",
+    "imagen": "/img/proyectos/redis-php.png",
+    "tags": [
+      "Redis",
+      "PHP",
+      "MySQL",
+      "Backend"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/CACHE_REDIS_MYSQL_PHP",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/5-PHP/CACHE_REDIS_MYSQL_PHP"
+  },
+  {
     "titulo": "Ejercicios de Programación Python",
     "descripcion": "Colección de 27 ejercicios resueltos de algoritmos y estructuras de datos en Python de la plataforma Jutge. Incluye problemas de diferentes niveles de dificultad.",
     "imagen": "/img/proyectos/python.png",
@@ -105,6 +144,19 @@
     "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/POSTGRESQL"
   },
   {
+    "titulo": "Redis Database",
+    "descripcion": "Implementación y despliegue de base de datos en memoria Redis con sus principales funcionalidades. Configuración, Administración del entorno y optimización de rendimiento.",
+    "imagen": "/img/proyectos/redis-db.png",
+    "tags": [
+      "Redis",
+      "NoSQL",
+      "Database",
+      "Cache"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/REDIS",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/REDIS"
+  },
+  {
     "titulo": "Gestión de Usuarios MySQL",
     "descripcion": "Administración completa de usuarios y permisos en MySQL. Incluye creación de usuarios, asignación de privilegios con GRANT/REVOKE, control de acceso basado en roles y gestión de seguridad de base de datos.",
     "imagen": "/img/proyectos/mysql-users.png",
@@ -116,5 +168,18 @@
     ],
     "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MYSQL_GESTION_USUARIOS",
     "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/1-BASE%20DE%20DATOS/MYSQL_GESTION_USUARIOS"
+  },
+  {
+    "titulo": "Simulador de Coche en Flask",
+    "descripcion": "Aplicación web desarrollada en Python con Flask para simular el comportamiento de un coche. Incluye interfaz web interactiva.",
+    "imagen": "/img/proyectos/python-coche.png",
+    "tags": [
+      "Python",
+      "Flask",
+      "Web",
+      "Simulador"
+    ],
+    "link": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/4-PYTHON/SIMULADOR_COCHE_FLASK",
+    "github": "https://github.com/DorianSGT/doriansgt.github.io/tree/main/ASIR/2ASIR/4-PYTHON/SIMULADOR_COCHE_FLASK"
   }
 ]
