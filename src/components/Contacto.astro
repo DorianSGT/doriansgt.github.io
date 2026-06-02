@@ -66,73 +66,12 @@
                     <div class="tooltip">GitHub</div>
                 </li>
 
-                <li class="icon-content">
-                    <a
-                        href="mailto:santigarcia15087@gmail.com"
-                        id="email-btn"
-                        aria-label="Email"
-                        data-social="gmail"
-                        data-email="santigarcia15087@gmail.com"
-                        onclick="return false;"
-                    >
-                        <div class="filled"></div>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-envelope-fill"
-                            viewBox="0 0 16 16"
-                            xml:space="preserve"
-                        >
-                            <path
-                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </a>
-                    <div class="tooltip" id="email-tooltip">Email</div>
-                </li>
+
             </ul>
         </div>
     </div>
 </section>
-<script>
-    const emailBtn = document.getElementById("email-btn");
-    const emailTooltip = document.getElementById("email-tooltip");
 
-    if (emailBtn && emailTooltip) {
-        emailBtn.addEventListener("click", async (e) => {
-            e.preventDefault(); // Evita que abra el mailto
-
-            const email = emailBtn.getAttribute("data-email");
-
-            if (!email) {
-                console.error("Email no encontrado");
-                return;
-            }
-
-            try {
-                // API moderna del portapapeles
-                await navigator.clipboard.writeText(email);
-
-                // Feedback visual: Cambiar texto del tooltip
-                const originalText = emailTooltip.innerText;
-                emailTooltip.innerText = "¡Copiado!";
-                emailTooltip.style.backgroundColor = "#22c55e"; // Verde éxito opcional
-
-                // Restaurar después de 2 segundos
-                setTimeout(() => {
-                    emailTooltip.innerText = originalText;
-                    emailTooltip.style.backgroundColor = ""; // Volver al color original
-                }, 2000);
-            } catch (err) {
-                console.error("Error al copiar:", err);
-                // Si falla, abrimos el mailto como fallback
-                window.location.href = `mailto:${email}`;
-            }
-        });
-    }
-</script>
 <style>
     .contacto {
         /* margin-top: -150px; removed to fix spacing */
@@ -253,8 +192,5 @@
         background-color: #24262a;
     }
 
-    .example-2 .icon-content a[data-social="gmail"] .filled,
-    .example-2 .icon-content a[data-social="gmail"] ~ .tooltip {
-        background-color: #ea4335;
-    }
+
 </style>
